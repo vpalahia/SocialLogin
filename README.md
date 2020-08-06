@@ -3,10 +3,11 @@
 A web page to login from different social applications(github, linkedin)
 
 Follow the bellow steps to run and test the application
-Pre-Requisite: 
+
+Pre-Requisite:
 There must be a Postgres server running locally on port 5432 and a database should exist with name "users" along with username as "postgres" and password set to "Welcome@123" otherwise db/init.go file can be configured according to the existing database before running the server. 
 
-
+Steps:
 1. Clone the respoitory.  
 2. Run "go run main.go" command at the root of the repository.
 3. In the browser go to "http://localhost:8084/login" url.

@@ -50,7 +50,7 @@ func Linkedinhome(c *gin.Context) {
 	if err != nil {
 		fmt.Println(err)
 	}
-
+	fmt.Println(string(body))
 	var response types.LinkedUser
 	err = json.Unmarshal(body, &response)
 	if err != nil {
@@ -59,7 +59,10 @@ func Linkedinhome(c *gin.Context) {
 
 	var userdata types.ThirdPartyResponse
 	userdata.MetaData.Linkedin = true
-	userdata.Email = response.Elements[0].Handle.Email
+	if len(response.Elements) > 0 {
+		userdata.Email = response.Elements[0].Handle.Email
+	}
+
 	err = db.InsertIntoDB(userdata)
 	if err != nil {
 		fmt.Println(err)

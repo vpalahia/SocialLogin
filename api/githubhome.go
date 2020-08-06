@@ -13,10 +13,10 @@ import (
 )
 
 const (
-	githubclient_id     = "5682daddb59621267434"
-	githubclinet_secret = "9f8badc88d32be682643630b489b22e6f979f85e"
-	linkedclient_id     = "86lwjpp8vqa3a8"
-	linkedclient_secret = "jRt393u9W9ZS7Ewt"
+	githubclient_id     = "69115e30be634bf2b4d1"
+	githubclinet_secret = "11ac96143a2fff8a5e696256676235a3eef82211"
+	linkedclient_id     = "78fsjtrjq6qlv5"
+	linkedclient_secret = "ueEGQESPo8g9i4k8"
 )
 
 func Githubhome(c *gin.Context) {
